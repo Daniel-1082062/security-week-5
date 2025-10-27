@@ -7,6 +7,15 @@
 <body>
 <h1>Encryption / Decryption tool</h1>
 <p>Use this tool to encrypt plain text or to decrypt encrypted text.</p>
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div>
+            {% for category, message in messages %}
+                <p class="{{ category }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
 <div class="horizontal-split-interface encrypt">
     <div class="input">
         <h2>Encrypt</h2>

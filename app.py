@@ -15,11 +15,11 @@ def encrypt():
     # Geen tekst om te encrypten? Error!!
     if not plaintext:
         flash("Error, please enter a plaintext.", "error")
-        return render_template(index.html, enc_output="")
+        return render_template('index.html', enc_output="")
     # Passphrase als key generatie method maar geen wachtwoord ingevoerd? Error!!!!!
     if mode == "passphrase" and not passphrase:
         flash("Error, please enter a passphrase.", "error")
-        return render_template(index.html, enc_output="")
+        return render_template('index.html', enc_output="")
     # Anders de pagina weer renderen met nu de encrypted data in het uitvoervak.
     else:
         enc_output = f"[STUB] encrypted(len={len(plaintext)}) with mode={mode}"
