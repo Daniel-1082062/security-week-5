@@ -1,5 +1,7 @@
 <h1>Security & Cyberwarfare Week 5 - Encryptie</h1>
 
+<h2>Onderzoek naar encryptie</h2>
+
 <h3>Wat is encryptie?</h3>
 Bij encryptie wordt een bericht versleuteld naar een cipher text. Deze cipher text kan vervolgens ook weer ontsleuteld worden met een sleutel, zoals bijvoorbeeld een wachtwoord of een session key. Telkens wanneer je data versleutelt, komt hier een andere cipher text uit. Zelfs wanneer de data en de sleutel telkens hetzelfde zijn als voorheen.
 
@@ -49,4 +51,4 @@ De sleutel zelf wordt niet bewaard. Wat bewaard wordt is de salt die samen met d
 De versleutelde output wordt gegeven als een JSON package met de ciphertext inclusief noodzakelijke metadata. Met de metadata zoals het gebruikte algoritme, de toegepaste nonce, KDF parameters en natuurlijk de ciphertext zelf, kan het versleutelde bericht ook weer ontsleuteld worden. Zonder de metadata is dit niet mogelijk. De key (passphrase) staat uiteraard niet in de JSON output. Deze dient de gebruiker zelf te onthouden. De rest mag allemaal in de package komen te staan. Dit is in lijn met het principe van Kerckhoff. JSON is een goede optie om zo’n totaalpakketje mee te maken. Het is namelijk goed te verwerken in webapps en is ook nog eens leesbaar voor mensen.
 
 <h3>Link naar mijn Github Repo:</h3>
-
+https://github.com/Daniel-1082062/security-week-5.git
