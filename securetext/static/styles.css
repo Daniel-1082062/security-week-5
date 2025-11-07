@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: arial;
+    font-family: arial, sans-serif;
 }
 
 body {
@@ -33,4 +33,22 @@ h2 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.success {
+    color: darkgreen !important;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 0.25rem;
+}
+
+.passphrase-input {
+    margin-bottom: 0.5rem;
 }

@@ -23,12 +23,12 @@
         <form class="encrypt-input" method="POST" action="/encrypt">
             <label for="plaintext">Input plain text:</label><br>
             <textarea aria-label="Plaintext to encrypt" rows="5" cols="50" id="plaintext" name="plaintext"></textarea>
-            <div>
+            <div class="passphrase-input" >
                 <p>Choose your passphrase method</p>
                 <label><input type="radio" name="mode" value="passphrase" checked> Passphrase</label>
                 <label><input type="radio" name="mode" value="keyfile"> Keyfile</label>
             </div>
-            <label for="passphrase">Password (Passphrase)</label>
+            <label class="passphrase-input" for="passphrase">Password (Passphrase)</label>
             <input type="password" id="passphrase" name="passphrase">
             <input type="submit" value="Encrypt!">
         </form>
@@ -48,7 +48,7 @@
         <form class="decrypt-input" method="POST" action="/decrypt">
             <label for="cipherjson">Input your encryptred JSON package</label><br>
             <textarea aria-label="Encrypted data" rows="5" cols="50" id="cipherjson" name="cipherjson"></textarea>
-            <div>
+            <div class="passphrase-input" >
                 <p>Choose your passphrase method</p>
                 <label><input type="radio" name="mode_dec" value="passphrase" checked> Passphrase</label>
                 <label><input type="radio" name="mode_dec" value="keyfile"> Keyfile</label>
