@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+body {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.horizontal-split-interface {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.encrypt {
+    margin-bottom: 1rem;
+}
+
+.input, .output {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

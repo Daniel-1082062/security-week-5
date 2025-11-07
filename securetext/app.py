@@ -53,7 +53,7 @@ def decrypt():
     except Exception as e:
         flash("Something went wrong.", "error")
         print("Decryption error:", e)
-        return render_template(index.html)
+        return render_template("index.html")
 
 
 if __name__ == '__main__':

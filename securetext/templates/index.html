@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Encryption Tool</title>
+    <link rel="stylesheet" href="./static/styles.css">
 </head>
 <body>
 <h1>Encryption / Decryption tool</h1>
@@ -16,17 +17,17 @@
         </div>
     {% endif %}
 {% endwith %}
+<h2>Encrypt</h2>
 <div class="horizontal-split-interface encrypt">
     <div class="input">
-        <h2>Encrypt</h2>
         <form class="encrypt-input" method="POST" action="/encrypt">
+            <label for="plaintext">Input plain text:</label><br>
+            <textarea aria-label="Plaintext to encrypt" rows="5" cols="50" id="plaintext" name="plaintext"></textarea>
             <div>
                 <p>Choose your passphrase method</p>
                 <label><input type="radio" name="mode" value="passphrase" checked> Passphrase</label>
                 <label><input type="radio" name="mode" value="keyfile"> Keyfile</label>
             </div>
-            <label for="plaintext">Input plain text:</label>
-            <textarea aria-label="Plaintext to encrypt" rows="5" cols="50" id="plaintext" name="plaintext"></textarea>
             <label for="passphrase">Password (Passphrase)</label>
             <input type="password" id="passphrase" name="passphrase">
             <input type="submit" value="Encrypt!">
@@ -41,17 +42,17 @@
         </div>
     </div>
 </div>
+<h2>Decrypt</h2>
 <div class="horizontal-split-interface decrypt">
     <div class="input">
-        <h2>Decrypt</h2>
         <form class="decrypt-input" method="POST" action="/decrypt">
+            <label for="cipherjson">Input your encryptred JSON package</label><br>
+            <textarea aria-label="Encrypted data" rows="5" cols="50" id="cipherjson" name="cipherjson"></textarea>
             <div>
                 <p>Choose your passphrase method</p>
                 <label><input type="radio" name="mode_dec" value="passphrase" checked> Passphrase</label>
                 <label><input type="radio" name="mode_dec" value="keyfile"> Keyfile</label>
             </div>
-            <label for="cipherjson">Input your encryptred JSON package</label>
-            <textarea aria-label="Encrypted data" rows="5" cols="50" id="cipherjson" name="cipherjson"></textarea>
             <label for="passphrase_dec">Password (Passphrase)</label>
             <input type="password" id="passphrase_dec" name="passphrase_dec">
             <input type="submit" value="Decrypt!">
